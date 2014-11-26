@@ -1,0 +1,44 @@
+<html><head></head>
+<body>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+	 var xhr = new XMLHttpRequest();
+	 var url = "http://quote.stock.hexun.com/urwh/ggph/s_a_rise.shtml";
+	 xhr.onreadystatechange = function (){
+		var state = xhr.readyState,status = xhr.status;
+		if(state === 4 && status === 200){
+			var resp = $(xhr.responseText);
+			var dtab = resp.find("#ggph");
+			$("body").append(dtab);
+			exportTableToExcel("ggph");
+		}
+	 };
+	 xhr.open("GET",url,true);
+	 xhr.send();
+	 
+	 function exportTableToExcel(table_id){   
+		  var AXO = new ActiveXObject("Excel.Application");  
+		  var WB;  
+		  var Sheet;  
+		  try{  
+			WB = AXO.Workbooks.Add();  
+			//激活当前sheet   
+			Sheet = WB.ActiveSheet;  
+		  }catch(err){  
+			alert("仅适用于IE浏览器,同时请确认已经安装好Excel软件");  
+			return false;  
+		  }  
+		  var o_table = document.getElementById(table_id);   
+		  var row_len = o_table.rows.length;   
+		  for (i = 0; i < row_len; i++)  {   
+			  var cell_len = o_table.rows[i].cells.length;   
+			  for (j = 0; j < cell_len; j++)  {   
+				var cellText = o_table.rows[i].cells[j].innerText;  
+				 Sheet.Cells(i + 1, j + 1).value = cellText;  
+			  }   
+		  }   
+		  AXO.Visible = true;   
+		}  
+</script>
+</body>
+</html>
