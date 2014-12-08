@@ -30,3 +30,13 @@
        num = num.replace(_rg,""+1);
       return (_isNeg?"-":"")+parseInt(num,2)
     }
+    
+   /**
+    *计算最大值 参数可以是数组和多个参数
+    **/
+    function max(){
+      var _max = Math.max,
+          _args = [].slice.call(arguments),
+          _isAry = {}.toString.call(_args[0]) == "[object Array]";
+      return _max.apply(null,_isAry?_args[0]:_args);
+    }
