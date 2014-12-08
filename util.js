@@ -1,4 +1,4 @@
- /**
+   /**
     JS中如果整数内存大于32位时, JS会自动屏蔽掉32位以后字节
     **/
         
@@ -21,12 +21,12 @@
     **/
     function toDecimalString(num){
        var _n = num.length===32,//2进制字符串的长度是否等于32位
-           _isNeg = false;//是否是负数
+           _isNeg = false,//是否是负数
+           _rg = /(0*)1/;
        if(_n){
          _isNeg = num.charAt(0) == 1;
          num = num.substring(1);//去除符号位
        }
-       var _rg = /(0*)1/,
-           num = num.replace(_rg,""+1);
+       num = num.replace(_rg,""+1);
       return (_isNeg?"-":"")+parseInt(num,2)
     }
