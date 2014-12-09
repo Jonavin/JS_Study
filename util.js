@@ -40,3 +40,11 @@
           _isAry = {}.toString.call(_args[0]) == "[object Array]";
       return _max.apply(null,_isAry?_args[0]:_args);
     }
+    
+    /**
+    *计算最大值 参数可以是数组和多个参数,上边的改进版
+    **/
+    function max2(fst){
+      var _max = Math.max,_isAry = fst instanceof Array;
+      return _max.apply(null,_isAry?fst:arguments);
+    }
