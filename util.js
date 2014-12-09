@@ -48,3 +48,10 @@
       var _max = Math.max,_isAry = fst instanceof Array;
       return _max.apply(null,_isAry?fst:arguments);
     }
+    
+    /**
+    *计算最大值 参数可以是数组和多个参数
+    **/
+    function max3(fst){
+      return Math.max.apply(null,(fst instanceof Array)?fst:arguments);
+    }
