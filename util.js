@@ -77,3 +77,27 @@
           }
       return cpr;
     }
+    //优化上边
+   //对象数组比较
+    function by(n){
+       var t = arguments[1]||"asc",
+          isAsc = (t.toLowerCase() === "asc"),
+          cpr = "".localeCompare;//优化点
+      
+       return function (now,next){
+            var _r = isAsc?cpr.call(now[n],next[n]):cpr.call(next[n],now[n]);//优化点
+            return _r;
+       }
+
+    }
+    //普通数组比较
+    by.normal = function (){
+      var t = arguments[0]||"asc",
+          isAsc = (t.toLowerCase() === "asc");
+          
+      return function(now,next){
+          var _r = isAsc?(now-next):(next-now);
+          return _r;
+      }
+
+    }
