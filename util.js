@@ -57,7 +57,7 @@
     }
     
     
-     //对象数组比较 TODO 可优化
+    //对象数组比较 TODO 可优化
     function by(n){
       var t = arguments[1]||"asc",
           isAsc = (t.toLowerCase() === "asc"),
