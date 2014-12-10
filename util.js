@@ -55,3 +55,25 @@
     function max3(fst){
       return Math.max.apply(null,(fst instanceof Array)?fst:arguments);
     }
+    
+    
+     //对象数组比较 TODO 可优化
+    function by(n){
+      var t = arguments[1]||"asc",
+          isAsc = (t.toLowerCase() === "asc"),
+          cpr = function (now,next){
+            var _r = isAsc?now[n].localeCompare(next[n]):next[n].localeCompare(now[n]);//包含中文的比较
+            return _r;
+          }
+      return cpr;
+    }
+    //普通数组比较
+    by.normal = function (){
+      var t = arguments[0]||"asc",
+          isAsc = (t.toLowerCase() === "asc"),
+          cpr = function(now,next){
+              var _r = isAsc?(now-next):(next-now);
+              return _r;
+          }
+      return cpr;
+    }
