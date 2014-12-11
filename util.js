@@ -96,3 +96,13 @@
       }
 
     }
+    //下划线转驼峰
+    function line2Camel(str){
+      var rg = /[_-](\w|\d)/g,r = rg.test(str),fm = RegExp["$+"].toUpperCase();
+      return str.replace(rg,fm);
+    }
+    //驼峰转下划线
+    function camel2Line(str,lt){
+      var rg = /([A-Z])/g,lt = lt||"_";
+      return str.replace(rg,lt+"$1");
+    }
