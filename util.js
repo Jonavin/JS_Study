@@ -137,7 +137,7 @@
     
     //获得最深而且含有子节点的节点
     function getDeepest(){
-      var s = JSON.stringify(abd).trim(), rg = /\[\{("text":("\w+"*?))/g;
-      alert(s.match(rg));
+      var s = JSON.stringify(abd).trim(), rg = /\[\{(?:"text":("\w+"*?))/g,r = s.match(rg),ln = r.length;
+      return r[ln-2]
     }
     getDeepest();
