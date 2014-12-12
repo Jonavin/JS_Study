@@ -112,8 +112,9 @@
       var s = location.search,rg = new RegExp(key+"=(\\w)&*"),r = rg.test(s);
       return RegExp["$+"];
     }
-  //下边方法的数据
-   var abd = [{
+    
+    //下边方法的数据
+    var abd = [{
         text: "123",
         children: [{
             text: "123_1",
@@ -141,3 +142,15 @@
       return r[ln-2]
     }
     getDeepest();
+    
+    //函数扩展
+    function XArray(){
+       var array = new Array();
+       [].push.apply(array,arguments);
+       //自定义方法
+       array.toStr = function (){
+         console.log(this.join(" fuck "));
+         console.log(this.reverse().join(" fuck "));//为了公平
+       }
+       return array
+     }
