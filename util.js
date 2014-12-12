@@ -106,3 +106,9 @@
       var rg = /([A-Z])/g,lt = lt||"_";
       return str.replace(rg,lt+"$1");
     }
+    
+   //取得location.href的指定参数
+    function getParam(key){
+      var s = location.search,rg = new RegExp(key+"=(\\w)&*"),r = rg.test(s);
+      return RegExp["$+"];
+    }
