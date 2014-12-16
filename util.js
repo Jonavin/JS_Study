@@ -185,10 +185,6 @@
           }
           return code;
       }
-      
-       alert(fixedCharCodeAt("大"));
-    
-    
     
     //已知字符
     function knownCharCodeAt (str, idx) {
