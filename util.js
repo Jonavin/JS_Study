@@ -154,3 +154,14 @@
        }
        return array
      }
+     
+    //获得字符串的字节
+    function getBytes(str){
+      var ret = [],code = "".charCodeAt;
+      (function (){
+         for(var i = 0,n = str.length;i<n;i++){
+           ret.push(code.call(str[i])&0xff);
+         }
+      })();
+      return ret;
+    }
