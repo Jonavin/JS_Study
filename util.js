@@ -217,3 +217,26 @@
         }
         return code;
     }
+    
+    //加载XML文件 
+    function loadXML(path){
+       var xmlDoc = null
+       try{
+         xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+       }catch(e1){
+         console.dir("e1:"+e1);
+         try{
+           xmlDoc = document.implementation.createDocument("","",null);
+         }catch(e2){
+           //TODO
+           console.dir("e2:"+e2);
+         }
+       } 
+       try{
+         xmlDoc.async = false;//同步
+         xmlDoc.load(path);//chrome不支持此方法 解决办法是: 使用ajax的xmlrequest代替.
+         return (xmlDoc);
+       }catch(e3){
+         console.dir("e3:"+e3);
+       }
+     }
