@@ -113,36 +113,6 @@
       return RegExp["$+"];
     }
     
-    //下边方法的数据
-    var abd = [{
-        text: "123",
-        children: [{
-            text: "123_1",
-            children: [{
-                text: "123_1_1",
-                children: [{
-                    text: "123_1_1_1",
-                    children: []
-                },
-                {
-                    text: "123_1_1_2",
-                    children: []
-                }]
-            },
-            {
-                text: "123_1_2",
-                children: []
-            }]
-        }]
-    }];
-    
-    //获得最深而且含有子节点的节点
-    function getDeepest(){
-      var s = JSON.stringify(abd).trim(), rg = /\[\{(?:"text":("\w+"*?))/g,r = s.match(rg),ln = r.length;
-      return r[ln-2]
-    }
-    getDeepest();
-    
     //函数扩展
     function XArray(){
        var array = new Array();
