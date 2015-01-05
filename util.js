@@ -195,4 +195,13 @@
         return code;
     }
     
+   //数组分块模式
+    function chunk(array,process,context){
+      setTimeout(function (){
+        var item = array.shift();//删除并返回第一个元素
+        process.call(context,item);
+        if(array.length>1)
+          setTimeout(arguments.callee,100);//严格模式下有问题
+      },100);
+    }
     
