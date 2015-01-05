@@ -205,3 +205,7 @@
       },100);
     }
     
+    //数组复制
+    function arrayClone(array){
+      return array.concat();
+    }
