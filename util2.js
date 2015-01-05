@@ -94,3 +94,41 @@ EventUtil = {
       return r[ln-2]
     }
     getDeepest();
+    
+    
+       function startRead(){
+      var file = document.getElementById("myfile").files.item(0);
+      if(file){
+        getAsText(file);
+      }
+    }
+    
+    function getAsText(infile){
+      var reader = new FileReader(); 
+      reader.readAsText(infile,"UTF-8");
+      reader.onprogress = updateProGress;
+      reader.onload = onLoad;
+      reader.onerror = onError;
+      
+    }
+    
+    
+    function updateProGress(event){
+      console.log(event);
+      if(event.lengthComputable){
+        var loaded = event.loaded/event.total;
+        console.log(loaded);
+        if(loaded<1){
+          
+        }
+      }
+    }
+    
+    function onLoad(event){
+      var ret = event.target.result;
+      //console.log(ret);
+    }
+    
+    function onError(event){
+      console.log(event.target.error.name);
+    }
