@@ -219,4 +219,9 @@
        rt = s.replace(r, "$1,").split(",");
        return Math.max.apply(null, rt);
    }
+   //添加千分位号
+   function addThSign(s) {
+      var r = /(\d)(?=(\d{3})+(?!\d))/g;
+      return rt = s.replace(r, "$1,");  
+   }
 
