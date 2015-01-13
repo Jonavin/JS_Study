@@ -209,3 +209,10 @@
     function arrayClone(array){
       return array.concat();
     }
+   //求连续最大的五位数
+   function solution(s) {
+       var r = /(?=(\d{4}))/g,
+       rt = s.replace(r, "$1,").split(",");
+       return Math.max.apply(null, rt);
+   }
+
