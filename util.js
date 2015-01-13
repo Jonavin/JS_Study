@@ -209,6 +209,10 @@
     function arrayClone(array){
       return array.concat();
     }
+    //数组复制2
+    function arrayClone2(array){
+      return array.slice();
+    }
    //求连续最大的五位数
    function solution(s) {
        var r = /(?=(\d{4}))/g,
