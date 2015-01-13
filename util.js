@@ -221,6 +221,7 @@
    }
    //添加千分位号
    function addThSign(s) {
+      //var r0 = /(\d{1,3})(?=(\d{3})+(?:$|\.))/g;（最正确的）
       var r = /(\d)(?=(\d{3})+(?!\d))/g;
       return rt = s.replace(r, "$1,");  
    }
