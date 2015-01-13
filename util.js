@@ -225,4 +225,11 @@
       var r = /(\d)(?=(\d{3})+(?!\d))/g;
       return rt = s.replace(r, "$1,");  
    }
+   
+   //添加千分位号(小数位要从左往右)
+   function addThSign(s) {
+      var r1 = /(\d)(?=(\d{3})+(?!\d))/g,r2 = /(\d{3})(?=\d)/g,r3 = /(\d+)\.(\d*)/, t = r3.test(s);
+      var rl = RegExp["$1"],rr = RegExp["$2"];
+      return rl.replace(r1,"$1,")+"."+rr.replace(r2,"$1,");
+   }
 
