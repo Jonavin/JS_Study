@@ -98,9 +98,16 @@
     }
     //下划线转驼峰
     function line2Camel(str){
-      var rg = /[_-](\w|\d)/g,r = rg.test(str),fm = RegExp["$+"].toUpperCase();
+      var rg = /[_-](\w)/g,r = rg.test(str),fm = RegExp["$+"].toUpperCase();
       return str.replace(rg,fm);
     }
+   //下划线转驼峰
+   function toCamelCase(s){
+      return s.replace(/_(\w)/g,function (a,b){
+        return b.toUpperCase();
+      });
+    }
+    
     //驼峰转下划线
     function camel2Line(str,lt){
       var rg = /([A-Z])/g,lt = lt||"_";
