@@ -246,4 +246,26 @@
       var r1 = /(\d)(?=(\d{3})+(?!\d))/g,r2 = /(\d{3})(?=\d)/g,r3 = s.split(".");
       return r3[0].replace(r1,"$1,")+"."+r3[1].replace(r2,"$1,");
    }
+   
+   
+    //并集
+    function union (arr1,arr2){
+       return arr2.concat(arr2);
+    }
+    //交集
+    function intersection(arr1,arr2){
+      
+    }
+    //补集
+    function complement(arr1,arr2){
+      
+    }
+    //差集
+    function difference(arr1,arr2){
+      
+    }
+    //去重
+    function distinct(arr){
+      
+    }
 
