@@ -132,3 +132,26 @@ EventUtil = {
     function onError(event){
       console.log(event.target.error.name);
     }
+  
+  //计算对称数个数
+  function symmetryNumCnt(endnum) {
+      var str = endnum + '';
+      var length = str.length;
+      var total = 0;
+      //计算小于最大位的个数
+      for (var i = 2; i < length; i++) {
+          total += 9 * Math.pow(10, parseInt((i - 1) / 2));
+      }
+      //计算最大位的个数
+      var half = parseInt(length / 2);
+      for (var i = 0; i < half; i++) {
+          var max = Math.min(parseInt(str.substr(i, 1)), parseInt(str.substr(length - i - 1, 1)));
+          if (max == 0) continue;
+          total += (max - (i == 0 ? 1 : 0)) * Math.pow(10, half - i);
+          if (i == 0 && max > 0) {
+              total += 1;
+          }
+      }
+      console.log(total);
+      return total;
+  }
