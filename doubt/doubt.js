@@ -22,24 +22,24 @@ console.log(ary5);//,,,,,,,,,
 //打印1-10000之间的所有对称数 （121,11,22,1221）  涉及到回文判断
 
 
-	var myArray = new Array();
-	for (var i = 0; i < 10000; i++) {
-		myArray[i] = (i + 1).toString();
-	}
-	var duichenArray = new Array();
-	for (var i = 0; i < 10000; i++) { //遍历所有的数组元素
-		var k = myArray[i].length;
-		if (k == 2) {//2位数对称数
-			myArray[i][0] == myArray[i][k - 1] ? duichenArray.push(myArray[i]) : "";
-		} else if (k == 3) {//3位数
-			myArray[i][0] == myArray[i][k - 1] ? duichenArray.push(myArray[i]) : "";
-		} else if (k > 3) {//三位数以上
-			if (myArray[i][0] == myArray[i][k - 1]) {
-				for (var j = 1; j < k - 1; j++) {
-					if (myArray[i][1] == myArray[i][j + 1]) {
-						duichenArray.push(myArray[i])
-					}
+var myArray = new Array();
+for (var i = 0; i < 10000; i++) {
+	myArray[i] = (i + 1).toString();
+}
+var duichenArray = new Array();
+for (var i = 0; i < 10000; i++) { //遍历所有的数组元素
+	var k = myArray[i].length;
+	if (k == 2) {//2位数对称数
+		myArray[i][0] == myArray[i][k - 1] ? duichenArray.push(myArray[i]) : "";
+	} else if (k == 3) {//3位数
+		myArray[i][0] == myArray[i][k - 1] ? duichenArray.push(myArray[i]) : "";
+	} else if (k > 3) {//三位数以上
+		if (myArray[i][0] == myArray[i][k - 1]) {
+			for (var j = 1; j < k - 1; j++) {
+				if (myArray[i][1] == myArray[i][j + 1]) {
+					duichenArray.push(myArray[i])
 				}
 			}
 		}
 	}
+}
