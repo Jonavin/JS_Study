@@ -43,3 +43,16 @@ for (var i = 0; i < 10000; i++) { //遍历所有的数组元素
 		}
 	}
 }
+//正确答案
+var arr = [];
+for(var i= 1;i <=9;i++){      
+    for(var j = 0 ;j<=9;j++){
+      if(i==j){
+        arr.push(i*10+j);
+      }
+      arr.push(i*100+j*10+i);
+      arr.push(i*1000+j*100+j*10+i);
+    }                   
+                            
+}
+alert(arr);
