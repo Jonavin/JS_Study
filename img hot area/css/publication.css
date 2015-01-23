@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* publication */
+.publication{ width:918px; height:auto; background:#f5f2f2; box-shadow:0 1px 2px rgba(0,0,0,.23); border:1px solid #dbdbdb; padding:0 24px 24px; margin:20px auto; }
+.publication fieldset{ display:block; width:918px; margin:0 auto; }
+.publication legend{ display:block; width:918px; height:58px; border-bottom:4px solid #ab161c; font:normal 30px/58px "微软雅黑"; color:#000; text-shadow:1px 1px #fff; }
+
+
+.publication .frm{ padding-top:40px; }
+.publication .new_item{ margin-bottom:35px; position:relative; }
+.publication label{ float:left; display:block; width:90px; padding-right:12px; font:normal 14px/33px "Microsoft YaHei","微软雅黑","SimHei","黑体"; color:#000; text-align:right; }
+.publication .frm_input{ float:left; }
+.publication label .red{ font-family:Verdana, Geneva, sans-serif; font-size:13px; color:#f00; padding-right:6px; }
+
+.publication .wordNum{ text-align:right; color:#999; position:absolute; top:-30px; right:230px; }
+.publication .wordNum cite{ font:normal 12px/32px "宋体"; }
+.publication .wordNum cite font{ font-family:Vani, "Trebuchet MS", Arial, Helvetica, sans-serif; font-size:16px; padding:0 4px; }
+.publication .wordNum .red{ color:#c62f1d; }
+
+.publication .selectWrap{ float:left; height:26px; background:url(../images/common/sprits.png) no-repeat -356px -811px; font:normal 12px/26px Arial, Helvetica, sans-serif; color:#4d4d4d; margin-top:4px; position:relative; }
+.publication .selectWrap div span{ float:left; display:block; height:26px; padding:0 50px 0 10px; overflow:hidden; cursor:pointer; white-space:nowrap; }
+.publication .selectWrap div a.open{ float:left; display:block; width:25px; height:26px; background:url(../images/common/sprits.png) no-repeat -775px -854px; }
+.publication .selectWrap .hidden{ display:none; }
+.publication .frm_input em{ float:left; display:block; width:25px; height:26px; margin-top:4px; font:normal 12px/26px "宋体"; color:#4d4d4d; text-align:center; }
+.publication .selectWrap ul{ display:none; background:#fff; border:1px solid #dbd9d6; position:absolute; top:25px; left:0; z-index:100; }
+.publication .selectWrap li{ height:26px; font:normal 12px/26px Arial, Helvetica, sans-serif; }
+.publication .selectWrap li a{ display:block; padding:0 9px; color:#4d4d4d; text-decoration:none; }
+.publication .selectWrap li a:hover{ background:#159264; color:#fff; }
+.publication .selectWrap li a.selected{ background:#ededed; color:#4d4d4d; }
+
+.publication .custom_radio{ float:left; width:72px; height:26px; position:relative; }
+.publication .custom_radio label{ float:left; display:block; width:40px; height:26px; background:url(../images/common/sprits.png) no-repeat -273px -135px; padding:0 0 0 21px; cursor:pointer; font:normal 12px/33px "宋体"; color:#4d4d4d; text-align:left; }
+.publication .custom_radio label.checked{ background-position:-273px -103px; }
+.publication .custom_radio input{ display:none; }
+
+.publication .custom_check{ }
+.publication .custom_check label{ background:url(../images/common/sprits.png) no-repeat -785px -905px; padding-left:25px; cursor:pointer; font:normal 12px/16px "宋体"; color:#4d4d4d; text-align:left; }
+.publication .custom_check .unchecked{ background-position:-785px -938px; }
+.publication .custom_check input{ display:none; }
+
+.publication .txt{ width:566px; height:33px; padding:0 11px; background:url(../images/common/sprits.png) no-repeat 0 -1479px; border:none 0; overflow:hidden; font:normal 12px/33px "宋体"; color:#333; }
+.publication .w196{ width:174px; background-position:0 -1276px; }
+.publication .txtarea{ width:576px; height:336px; background:url(../images/common/sprits.png) no-repeat 0 -1522px; border:none 0; resize:none; padding:1px 1px 1px 11px; overflow-x:hidden; overflow-y:auto; font:normal 12px/28px "宋体"; color:#333; }
+.publication .txtarea2{ width:582px; height:404px; background:url(../images/guestbook/bg_txtarea2.gif) no-repeat; border:none; resize:none; overflow:hidden; color:#333; }
+.publication .def{ color:#999; }
+
+.publication .loadLayer{ font:normal 12px/33px "宋体"; color:#999; position:relative; }
+.publication .loadLayer input[type='file']{ position:absolute; left:0; top:0; cursor:pointer; }
+.publication .loadLayer .txt_file{ width:400px; height:33px; background:#fff; border:none; font:normal 12px/33px Arial, Helvetica, sans-serif; color:#666; position:absolute; left:112px; top:0; }
+.publication .btn_load{ float:left; width:213px; height:33px; background:url(../images/common/sprits.png) no-repeat -228px -938px; border:none; cursor:pointer; }
+
+.publication .tips{ background:url(../images/common/sprits.png) no-repeat -784px -981px; padding-left:23px; margin-top:9px; font:normal 12px/16px "宋体"; color:#999; }
+.publication .tips2{ display:inline-block; height:16px; background:url(../images/common/sprits.png) no-repeat -784px -981px; padding-left:23px; font:normal 12px "宋体"; color:#999; position:relative; top:9px; left:10px; }
+
+.publication .btn_submit{ display:block; width:431px; height:44px; background:url(../images/common/sprits.png) no-repeat 0 -1319px; border:none 0; cursor:pointer; } 
+
+.attention{ padding:12px 15px 30px 102px; }
+.attention h4{ margin-bottom:6px; font:normal 14px/20px "Microsoft YaHei","微软雅黑","SimHei","黑体"; color:#000; }
+.attention p{ font:normal 12px/28px "宋体"; color:#4d4d4d; }
+
+.picList{ width:573px; background:#ebeaea; margin-top:30px; margin-bottom:30px; padding-top:15px; padding-left:15px; }
+.picList li{ float:left; width:100px; height:75px; margin-right:14px; margin-bottom:10px; position:relative; }
+.picList li img{ width:100px; height:75px; overflow:hidden; }
+.picList li img.loading{ width:100px; height:20px; position:absolute; top:28px; left:0px; }
+.picList li a.close{ display:block; width:19px; height:19px; background:url(../images/common/close3.png) no-repeat; position:absolute; right:-6px; top:-5px; }
+.picList li .false{ }
+.picList li .fileName{ display:block; width:80px; height:20px; overflow:hidden; font:normal 12px/20px Arial, Helvetica, sans-serif; color:#666; text-align:center; position:absolute; left:10px; bottom:10px; z-index:2; }
+.btn_add{ display:block; width:100px; height:75px; background:url(../images/common/btn_add.gif) no-repeat; cursor:pointer; }
+
+.picList li .fileName2{ display:block; width:80px; height:20px; overflow:hidden; font:normal 12px/20px Arial, Helvetica, sans-serif; color:#666; text-align:center; position:absolute; left:10px; top:25px; z-index:2; }
+.picList li p{ display:block; width:80px; height:20px; overflow:hidden; font:normal 12px/20px Arial, Helvetica, sans-serif; color:#000; text-align:center; position:absolute; left:10px; bottom:8px; z-index:2; }
